@@ -1,38 +1,167 @@
 .robot-container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(4, 0, 255);
+  margin-top: 10vh;
+  height: 100vh;
+  width: 100vw;
+  border: 5px solid;
 }
 
 .robot-face-shape {
+  position: relative;
+  width: 50vw;
+  height: 70vh;
+  color: aqua;
+  border: 1vmin solid;
+  border-radius: 50%;
+  background-image: url(https://images.pexels.com/photos/41953/earth-blue-planet-globe-planet-41953.jpeg);
+  background-position: center;
+  background-size: 50vw 70vh;
 }
 
 .robot-eye-left {
+  position: relative;
+  top: 15vh;
+  left: 10vw;
+  width: 10%;
+  height: 16%;
+  background: violet;
+  transform: rotate(-20deg);
 }
 
 .robot-eye-right {
+  position: relative;
+  margin-left: 15%;
+  top: 5vh;
+  left: 28vw;
+  width: 10%;
+  height: 16%;
+  background: #c6ffdd; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #c6ffdd,
+    #fbd786,
+    #f7797d
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #c6ffdd,
+    #fbd786,
+    #f7797d
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  transform: rotate(20deg);
 }
 
 .robot-ear-left {
+  position: absolute;
+  margin-top: 15%;
+  width: 12em;
+  height: 12em;
+  bottom: 28vh;
+  left: -13vw;
+  background: rgb(98, 3, 142);
+  border-radius: 50%;
 }
 
 .robot-ear-right {
+  position: absolute;
+  top: 12vh;
+  left: 49.6vw;
+  width: 190px;
+  aspect-ratio: 1;
+  --o: calc(50% * tan(-22.5deg));
+  clip-path: polygon(
+    var(--o) 50%,
+    50% var(--o),
+    calc(100% - var(--o)) 50%,
+    50% calc(100% - var(--o))
+  );
+  background: rgb(7, 100, 53);
+  transform: rotate(30deg);
 }
 
 .robot-nose {
+  position: relative;
+  margin-left: 10%;
+  width: 0;
+  height: 0;
+  top: 5vh;
+  left: 16vw;
+  border-left: 3vw solid transparent;
+  border-right: 3vw solid transparent;
+  border-bottom: 5vw solid slateblue;
 }
 
-.robot-teeth {
+.robot-mouth {
+  position: relative;
+  margin-left: 3vw;
+  width: 27vw;
+  height: 10vh;
+  top: 10vh;
+  left: 8vw;
+  border: 0.5vmin solid;
+  color: rgb(0, 0, 255);
+  border-radius: 2vw 2vw 8vw 8vw / 2vw 2vw 6vw 6vw;
 }
 
 .robot-tooth {
+  position: relative;
+  display: inline-block;
+  margin-left: 3vmin;
+  border-bottom: 2vw solid rgb(238, 235, 12);
+  border-left: 0.5vw solid transparent;
+  border-right: 0.5vw solid transparent;
+  height: 0;
+  width: 2.5vw;
+  opacity: 0.5;
 }
 
-.robot-hair-style {
+.robot-tooth-bottom {
+  position: relative;
+  display: inline-block;
+  margin-left: 3vmin;
+  border-bottom: 2vw solid rgb(201, 169, 11);
+  border-left: 0.5vw solid transparent;
+  border-right: 0.5vw solid transparent;
+  height: 0;
+  width: 2.5vw;
+  transform: rotate(180deg);
+  opacity: 0.5;
 }
 
 .robot-hair-one {
+  position: absolute;
+  bottom: 98%;
+  margin-left: 25%;
+  height: 8vh;
+  aspect-ratio: 1;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  background: #88a65e;
+  transform: rotate(-20deg);
 }
 
 .robot-hair-two {
+  position: absolute;
+  bottom: 102%;
+  margin-left: 650px;
+  right: 22vw;
+  height: 8vh;
+  aspect-ratio: 1;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  background: #88a65e;
 }
 
 .robot-hair-three {
+  position: absolute;
+  bottom: 96%;
+  margin-left: 950px;
+  right: 10vw;
+  height: 8vh;
+  aspect-ratio: 1;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  background: #88a65e;
+  transform: rotate(20deg);
 }
